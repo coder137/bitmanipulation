@@ -13,14 +13,21 @@ target_include_directories(bit INTERFACE .)
 # TESTS
 set(WARNINGS_AS_ERRORS -Wall -Werror)
 
-# BIT MASK TEST
-add_executable(bit_mask_test test/bit_mask_test.c)
-target_compile_options(bit_mask_test PRIVATE ${WARNINGS_AS_ERRORS})
-target_link_libraries(bit_mask_test PRIVATE bit unity)
-add_test(NAME bit_mask_test COMMAND bit_mask_test)
+# TEST FUNCTION
+function(add_bitmanipulation_test test_name test_file)
+    message("Test name [${test_name}] -> Test file [${test_file}]")
+    add_executable(${test_name} ${test_file})
+    target_compile_options(${test_name} PRIVATE ${WARNINGS_AS_ERRORS})
+    target_link_libraries(${test_name} PRIVATE bit unity)
+    add_test(NAME ${test_name} COMMAND ${test_name})
+endfunction()
 
-# BIT SET CLEAR TEST
-add_executable(bit_set_test test/bit_set_test.c)
-target_compile_options(bit_set_test PRIVATE ${WARNINGS_AS_ERRORS})
-target_link_libraries(bit_set_test PRIVATE bit unity)
-add_test(NAME bit_set_test COMMAND bit_set_test)
+
+# BIT MASK TEST
+add_bitmanipulation_test(bit_mask_test test/bit_mask_test.c)
+
+# BIT SET TEST
+add_bitmanipulation_test(bit_set_test test/bit_set_test.c)
+
+# BIT RESET TEST
+add_bitmanipulation_test(bit_reset_test test/bit_reset_test.c)
