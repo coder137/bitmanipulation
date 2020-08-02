@@ -28,10 +28,11 @@ script:
   - pip --version
   - cmake --version
   - ninja --version
+  - gcc-9 --version
   # Start Script
   # C Build
   - cd C
-  - /usr/bin/cmake -DCMAKE_C_COMPILER:FILEPATH=/usr/bin/gcc-9 -DCMAKE_CXX_COMPILER:FILEPATH=/usr/bin/g++-9 -B . -S . -G Ninja
+  - cmake -DCMAKE_C_COMPILER:FILEPATH=/usr/bin/gcc-9 -DCMAKE_CXX_COMPILER:FILEPATH=/usr/bin/g++-9 -B . -S . -G Ninja
   - cmake --build . --config Debug --target all
   - ctest -C Debug -T test --output-on-failure
   # TODO, Add C++ Build
