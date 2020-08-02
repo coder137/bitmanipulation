@@ -1,4 +1,6 @@
 language: cpp
+python: 
+  - '3.8'
 dist: bionic
 compiler:
   - gcc
@@ -20,7 +22,7 @@ addons:
     update: true
 script:
   - pip --version
-  - pip3 --version
+  - pip3.8 --version
   - cd C
   - /usr/bin/cmake --version
   - cmake --version
