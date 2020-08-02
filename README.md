@@ -6,6 +6,8 @@
 
 # Bit Manipulation
 
+[![Build Status](https://travis-ci.org/coder137/bitmanipulation.svg?branch=master)](https://travis-ci.org/coder137/bitmanipulation)
+
 C and C++ Library for bit manipulation
 
 # Build Process
