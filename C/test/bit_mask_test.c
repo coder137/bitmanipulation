@@ -1,7 +1,5 @@
 #include "unity.h"
 
-#include <stdint.h>
-
 #include "bit.h"
 
 void setUp() {}
