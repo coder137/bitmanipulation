@@ -14,16 +14,21 @@ before_install:
   - sudo add-apt-repository -y ppa:ubuntu-toolchain-r/test
   - sudo apt-get -q update
   # - sudo apt-get -y install cmake ninja-build
-  - sudo apt -y install gcc-9 g++-9
+  - sudo apt-get -y install ninja-build
+  - sudo apt-get -y install gcc-9 g++-9
   # - sudo update-alternatives --install /usr/bin/gcc gcc /usr/bin/gcc-9 90 --slave /usr/bin/g++ g++ /usr/bin/g++-9 --slave /usr/bin/gcov gcov /usr/bin/gcov-9
   # - sudo update-alternatives --config gcc
+  - pyenv versions
+  - pyenv global 3.6
+  - pip install cmake
 addons:
   apt:
     update: true
 script:
-  - pyenv versions
-  # TODO, Set your pyenv global version here
+  # Information
+  - python --version
   - pip --version
+  # Script
   - cd C
   - /usr/bin/cmake --version
   - cmake --version
