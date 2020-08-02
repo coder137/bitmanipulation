@@ -1,6 +1,6 @@
 language: cpp
 python: 
-  - '3.8'
+  - "3.6"
 dist: bionic
 compiler:
   - gcc
@@ -21,8 +21,9 @@ addons:
   apt:
     update: true
 script:
+  - pyenv versions
+  # TODO, Set your pyenv global version here
   - pip --version
-  - pip3.8 --version
   - cd C
   - /usr/bin/cmake --version
   - cmake --version
