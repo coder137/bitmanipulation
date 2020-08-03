@@ -1,4 +1,5 @@
 - [Bit Manipulation](#bit-manipulation)
+- [Usage](#usage)
 - [Build Process](#build-process)
   - [Clone the repository](#clone-the-repository)
   - [Generate and build library](#generate-and-build-library)
@@ -9,6 +10,13 @@
 [![Build Status](https://travis-ci.org/coder137/bitmanipulation.svg?branch=master)](https://travis-ci.org/coder137/bitmanipulation)
 
 C and C++ Library for bit manipulation
+
+# Usage
+
+The **C** version of bit manipulation is just one header file and has one dependency
+
+- Copy `C/bit.h` to your project
+- Has dependency on `<stdint.h>` for data types
 
 # Build Process
 
