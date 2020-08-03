@@ -13,14 +13,16 @@ before_install:
   # - sudo apt-add-repository -y 'deb https://apt.kitware.com/ubuntu/ bionic main'
   # - sudo apt-get -y install cmake
   - sudo add-apt-repository -y ppa:ubuntu-toolchain-r/test
-  - sudo apt-get -q update
-  - sudo apt-get -y install ninja-build
-  - sudo apt-get -y install gcc-9 g++-9
-  - sudo apt-get -y install doxygen graphviz
   - pip install cmake
 addons:
   apt:
     update: true
+    packages:
+      - doxygen
+      - graphviz
+      - ninja-build
+      - gcc-9
+      - g++-9
 script:
   # Information
   - python --version
@@ -52,4 +54,3 @@ deploy:
 branches:
   only:
   - master
-  - gh-pages
