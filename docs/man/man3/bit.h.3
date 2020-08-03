@@ -13,42 +13,141 @@ C/bit.h
 
 .in +1c
 .ti -1c
-.RI "#define \fBBIT_MASK_HELPER\fP(pos,  type)   (~((type)(~0) << pos))"
+.RI "#define \fBBIT_MASK\fP(n)   \fBBIT_MASK_HELPER\fP(n, uint32_t)"
 .br
-.ti -1c
-.RI "#define \fBBIT_MASK\fP(pos)   \fBBIT_MASK_HELPER\fP(pos, uint32_t)"
-.br
-.ti -1c
-.RI "#define \fBBIT_MASK64\fP(pos)   \fBBIT_MASK_HELPER\fP(pos, uint64_t)"
-.br
+.RI "Creates a UINT32 BITMASK of size n\&. "
 .ti -1c
 .RI "#define \fBBIT_SET\fP(value,  pos)   (value |= (1 << pos))"
 .br
+.RI "Set a BIT on the variable at a given position\&. "
 .ti -1c
 .RI "#define \fBBIT_SET_N\fP(value,  start_pos,  n)   (value |= (\fBBIT_MASK\fP(n) << start_pos))"
 .br
+.RI "Set N BITS on the variable starting from a given position\&. "
 .ti -1c
 .RI "#define \fBBIT_RESET\fP(value,  pos)   (value &= ~(1 << pos))"
 .br
+.RI "Clear a BIT on the variable at a given position\&. "
 .ti -1c
 .RI "#define \fBBIT_RESET_N\fP(value,  start_pos,  n)   (value &= ~(\fBBIT_MASK\fP(n) << start_pos))"
 .br
+.RI "Clear N BITS on the variable starting from a given position\&. "
+.ti -1c
+.RI "#define \fBBIT_MASK64\fP(n)   \fBBIT_MASK_HELPER\fP(n, uint64_t)"
+.br
+.RI "Creates a UINT64 BITMASK of size n\&. "
+.ti -1c
+.RI "#define \fBBIT_MASK_HELPER\fP(pos,  type)   (~((type)(~0) << pos))"
+.br
+.RI "A generic BIT MASK API for different datatypes\&. "
 .in -1c
 .SH "Macro Definition Documentation"
 .PP 
-.SS "#define BIT_MASK(pos)   \fBBIT_MASK_HELPER\fP(pos, uint32_t)"
+.SS "#define BIT_MASK(n)   \fBBIT_MASK_HELPER\fP(n, uint32_t)"
 
-.SS "#define BIT_MASK64(pos)   \fBBIT_MASK_HELPER\fP(pos, uint64_t)"
+.PP
+Creates a UINT32 BITMASK of size n\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIn\fP Numbers of bits used to create the BITMASK 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+UINT32 
+.RE
+.PP
+
+.SS "#define BIT_MASK64(n)   \fBBIT_MASK_HELPER\fP(n, uint64_t)"
+
+.PP
+Creates a UINT64 BITMASK of size n\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIn\fP Number of bits used to create the BITMASK 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+UINT64 
+.RE
+.PP
 
 .SS "#define BIT_MASK_HELPER(pos, type)   (~((type)(~0) << pos))"
 
+.PP
+A generic BIT MASK API for different datatypes\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIpos\fP Shift by current position 
+.br
+\fItype\fP Datatype used (uint32_t, uint64_t) 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+sizeof(type) 
+.RE
+.PP
+
 .SS "#define BIT_RESET(value, pos)   (value &= ~(1 << pos))"
+
+.PP
+Clear a BIT on the variable at a given position\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIvalue\fP This output variable that is modified 
+.br
+\fIpos\fP The BIT position to clear data (0 indexed) 
+.RE
+.PP
 
 .SS "#define BIT_RESET_N(value, start_pos, n)   (value &= ~(\fBBIT_MASK\fP(n) << start_pos))"
 
+.PP
+Clear N BITS on the variable starting from a given position\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIvalue\fP The output variable that is modified 
+.br
+\fIstart_pos\fP The starting position of the bit (0 indexed) 
+.br
+\fIn\fP The number of bits used 
+.RE
+.PP
+
 .SS "#define BIT_SET(value, pos)   (value |= (1 << pos))"
 
+.PP
+Set a BIT on the variable at a given position\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIvalue\fP The output variable that is modified 
+.br
+\fIpos\fP The BIT position to set data (0 indexed) 
+.RE
+.PP
+
 .SS "#define BIT_SET_N(value, start_pos, n)   (value |= (\fBBIT_MASK\fP(n) << start_pos))"
+
+.PP
+Set N BITS on the variable starting from a given position\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIvalue\fP The output variable that is modified 
+.br
+\fIstart_pos\fP The starting position of the bit (0 indexed) 
+.br
+\fIn\fP The number of bits used 
+.RE
+.PP
 
 .SH "Author"
 .PP 

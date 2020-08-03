@@ -74,18 +74,33 @@ $(function() {
 <div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160; </div>
 <div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &lt;stdint.h&gt;</span></div>
 <div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160; </div>
-<div class="line"><a name="l00006"></a><span class="lineno"><a class="line" href="bit_8h.html#a7d0460bbe1041be6fdf22fd2f9e85f46">    6</a></span>&#160;<span class="preprocessor">#define BIT_MASK_HELPER(pos, type) (~((type)(~0) &lt;&lt; pos))</span></div>
-<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160; </div>
-<div class="line"><a name="l00008"></a><span class="lineno"><a class="line" href="bit_8h.html#a6cc1e746fe260f98aba5a356b05910fc">    8</a></span>&#160;<span class="preprocessor">#define BIT_MASK(pos) BIT_MASK_HELPER(pos, uint32_t)</span></div>
-<div class="line"><a name="l00009"></a><span class="lineno"><a class="line" href="bit_8h.html#a20d91ff903456de1cd9416cd0c9296cc">    9</a></span>&#160;<span class="preprocessor">#define BIT_MASK64(pos) BIT_MASK_HELPER(pos, uint64_t)</span></div>
-<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160; </div>
-<div class="line"><a name="l00011"></a><span class="lineno"><a class="line" href="bit_8h.html#aa4118521cb27055d7b32c169539b3003">   11</a></span>&#160;<span class="preprocessor">#define BIT_SET(value, pos) (value |= (1 &lt;&lt; pos))</span></div>
-<div class="line"><a name="l00012"></a><span class="lineno"><a class="line" href="bit_8h.html#a57fb93c797c6f17edd47b511323f32cf">   12</a></span>&#160;<span class="preprocessor">#define BIT_SET_N(value, start_pos, n) (value |= (BIT_MASK(n) &lt;&lt; start_pos))</span></div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160; </div>
-<div class="line"><a name="l00014"></a><span class="lineno"><a class="line" href="bit_8h.html#a7b5507c765b63d36f04f262106c97872">   14</a></span>&#160;<span class="preprocessor">#define BIT_RESET(value, pos) (value &amp;= ~(1 &lt;&lt; pos))</span></div>
-<div class="line"><a name="l00015"></a><span class="lineno"><a class="line" href="bit_8h.html#a916fcef68710e4ffc501703e3f262bcc">   15</a></span>&#160;<span class="preprocessor">#define BIT_RESET_N(value, start_pos, n) (value &amp;= ~(BIT_MASK(n) &lt;&lt; start_pos))</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="comment">//</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="comment">// 32 BIT APIS</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="comment">//</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160; </div>
+<div class="line"><a name="l00015"></a><span class="lineno"><a class="line" href="bit_8h.html#a3c12c6d36ad0aa481a3436923d21f4f8">   15</a></span>&#160;<span class="preprocessor">#define BIT_MASK(n) BIT_MASK_HELPER(n, uint32_t)</span></div>
 <div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160; </div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00022"></a><span class="lineno"><a class="line" href="bit_8h.html#aa4118521cb27055d7b32c169539b3003">   22</a></span>&#160;<span class="preprocessor">#define BIT_SET(value, pos) (value |= (1 &lt;&lt; pos))</span></div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160; </div>
+<div class="line"><a name="l00030"></a><span class="lineno"><a class="line" href="bit_8h.html#a57fb93c797c6f17edd47b511323f32cf">   30</a></span>&#160;<span class="preprocessor">#define BIT_SET_N(value, start_pos, n) (value |= (BIT_MASK(n) &lt;&lt; start_pos))</span></div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160; </div>
+<div class="line"><a name="l00037"></a><span class="lineno"><a class="line" href="bit_8h.html#a7b5507c765b63d36f04f262106c97872">   37</a></span>&#160;<span class="preprocessor">#define BIT_RESET(value, pos) (value &amp;= ~(1 &lt;&lt; pos))</span></div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160; </div>
+<div class="line"><a name="l00045"></a><span class="lineno"><a class="line" href="bit_8h.html#a916fcef68710e4ffc501703e3f262bcc">   45</a></span>&#160;<span class="preprocessor">#define BIT_RESET_N(value, start_pos, n) (value &amp;= ~(BIT_MASK(n) &lt;&lt; start_pos))</span></div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160; </div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;<span class="comment">//</span></div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;<span class="comment">// 64 BIT APIS</span></div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;<span class="comment">//</span></div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160; </div>
+<div class="line"><a name="l00056"></a><span class="lineno"><a class="line" href="bit_8h.html#a1d49978a2c60e8a4934cf1ffd7de10e2">   56</a></span>&#160;<span class="preprocessor">#define BIT_MASK64(n) BIT_MASK_HELPER(n, uint64_t)</span></div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160; </div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;<span class="comment">//</span></div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;<span class="comment">// HELPER APIS</span></div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;<span class="comment">//</span></div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160; </div>
+<div class="line"><a name="l00068"></a><span class="lineno"><a class="line" href="bit_8h.html#a7d0460bbe1041be6fdf22fd2f9e85f46">   68</a></span>&#160;<span class="preprocessor">#define BIT_MASK_HELPER(pos, type) (~((type)(~0) &lt;&lt; pos))</span></div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160; </div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;<span class="preprocessor">#endif</span></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
