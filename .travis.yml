@@ -30,6 +30,7 @@ script:
   - cmake --version
   - ninja --version
   - gcc-9 --version
+  - doxygen --version
   # Start Script
   # C Build
   - cd C
