@@ -38,6 +38,7 @@ script:
   - ctest -C Debug -T test --output-on-failure
   # TODO, Add C++ Build
   # Doxygen Generator
+  - cd ..
   - doxygen Doxyfile
 deploy:
   provider: pages
