@@ -16,6 +16,7 @@ before_install:
   - sudo apt-get -q update
   - sudo apt-get -y install ninja-build
   - sudo apt-get -y install gcc-9 g++-9
+  - sudo apt-get -y install doxygen graphviz
   - pyenv versions
   - pyenv global 3.6
   - pip install cmake
@@ -36,6 +37,16 @@ script:
   - cmake --build . --config Debug --target all
   - ctest -C Debug -T test --output-on-failure
   # TODO, Add C++ Build
+  # Doxygen Generator
+  - doxygen Doxyfile
+deploy:
+  provider: pages
+  skip_cleanup: true
+  github_token: $GITHUB_TOKEN
+  keep_history: true
+  on:
+    branch: master
 branches:
   only:
   - master
+  - gh-pages
