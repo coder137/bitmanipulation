@@ -32,9 +32,11 @@ script:
   # Start Script
   # C Build
   - cd C
-  - cmake -DCMAKE_C_COMPILER:FILEPATH=/usr/bin/gcc-9 -DCMAKE_CXX_COMPILER:FILEPATH=/usr/bin/g++-9 -B . -S . -G Ninja
-  - cmake --build . --config Debug --target all
+  - cmake -DCMAKE_C_COMPILER:FILEPATH=/usr/bin/gcc-9 -DCMAKE_CXX_COMPILER:FILEPATH=/usr/bin/g++-9 -B build -S . -G Ninja
+  - cmake --build build --config Debug --target all
+  - cd build
   - ctest -C Debug -T test --output-on-failure
+  - cd ..
   # TODO, Add C++ Build
   # Doxygen Generator
   - cd ..
