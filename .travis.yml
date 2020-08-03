@@ -30,18 +30,18 @@ script:
   - gcc-9 --version
   - doxygen --version
   # Start Script
+  # Doxygen Generator
+  - mkdir docs
+  - doxygen Doxyfile
   # C Build
   - cd C
   - cmake -DCMAKE_C_COMPILER:FILEPATH=/usr/bin/gcc-9 -DCMAKE_CXX_COMPILER:FILEPATH=/usr/bin/g++-9 -B build -S . -G Ninja
   - cmake --build build --config Debug --target all
   - cd build
   - ctest -C Debug -T test --output-on-failure
-  - cd ..
+  - cd ../..
+  - pwd
   # TODO, Add C++ Build
-  # Doxygen Generator
-  - cd ..
-  - mkdir docs
-  - doxygen Doxyfile
 deploy:
   provider: pages
   skip_cleanup: true
