@@ -40,6 +40,7 @@ script:
   # TODO, Add C++ Build
   # Doxygen Generator
   - cd ..
+  - mkdir docs
   - doxygen Doxyfile
 deploy:
   provider: pages
