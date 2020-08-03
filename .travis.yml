@@ -1,7 +1,7 @@
 language: cpp
 python: 
   - "3.6"
-dist: bionic
+dist: focal
 compiler:
   - gcc
 os:
@@ -13,16 +13,16 @@ before_install:
   # - sudo apt-add-repository -y 'deb https://apt.kitware.com/ubuntu/ bionic main'
   # - sudo apt-get -y install cmake
   - sudo add-apt-repository -y ppa:ubuntu-toolchain-r/test
-  - sudo apt-get -q update
-  - sudo apt-get -y install ninja-build
-  - sudo apt-get -y install gcc-9 g++-9
-  - sudo apt-get -y install doxygen graphviz
-  - pyenv versions
-  - pyenv global 3.6
   - pip install cmake
 addons:
   apt:
     update: true
+    packages:
+      - doxygen
+      - graphviz
+      - ninja-build
+      - gcc-9
+      - g++-9
 script:
   # Information
   - python --version
@@ -30,16 +30,20 @@ script:
   - cmake --version
   - ninja --version
   - gcc-9 --version
+  - doxygen --version
   # Start Script
+  # Doxygen Generator
+  - mkdir docs
+  - doxygen Doxyfile
   # C Build
   - cd C
-  - cmake -DCMAKE_C_COMPILER:FILEPATH=/usr/bin/gcc-9 -DCMAKE_CXX_COMPILER:FILEPATH=/usr/bin/g++-9 -B . -S . -G Ninja
-  - cmake --build . --config Debug --target all
+  - cmake -DCMAKE_C_COMPILER:FILEPATH=/usr/bin/gcc-9 -DCMAKE_CXX_COMPILER:FILEPATH=/usr/bin/g++-9 -B build -S . -G Ninja
+  - cmake --build build --config Debug --target all
+  - cd build
   - ctest -C Debug -T test --output-on-failure
+  - cd ../..
+  - pwd
   # TODO, Add C++ Build
-  # Doxygen Generator
-  - cd ..
-  - doxygen Doxyfile
 deploy:
   provider: pages
   skip_cleanup: true
@@ -50,4 +54,3 @@ deploy:
 branches:
   only:
   - master
-  - gh-pages

@@ -1,0 +1,55 @@
+.TH "C/bit.h" 3 "Mon Aug 3 2020" "Bit Manipulation" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+C/bit.h
+.SH SYNOPSIS
+.br
+.PP
+\fC#include <stdint\&.h>\fP
+.br
+
+.SS "Macros"
+
+.in +1c
+.ti -1c
+.RI "#define \fBBIT_MASK_HELPER\fP(pos,  type)   (~((type)(~0) << pos))"
+.br
+.ti -1c
+.RI "#define \fBBIT_MASK\fP(pos)   \fBBIT_MASK_HELPER\fP(pos, uint32_t)"
+.br
+.ti -1c
+.RI "#define \fBBIT_MASK64\fP(pos)   \fBBIT_MASK_HELPER\fP(pos, uint64_t)"
+.br
+.ti -1c
+.RI "#define \fBBIT_SET\fP(value,  pos)   (value |= (1 << pos))"
+.br
+.ti -1c
+.RI "#define \fBBIT_SET_N\fP(value,  start_pos,  n)   (value |= (\fBBIT_MASK\fP(n) << start_pos))"
+.br
+.ti -1c
+.RI "#define \fBBIT_RESET\fP(value,  pos)   (value &= ~(1 << pos))"
+.br
+.ti -1c
+.RI "#define \fBBIT_RESET_N\fP(value,  start_pos,  n)   (value &= ~(\fBBIT_MASK\fP(n) << start_pos))"
+.br
+.in -1c
+.SH "Macro Definition Documentation"
+.PP 
+.SS "#define BIT_MASK(pos)   \fBBIT_MASK_HELPER\fP(pos, uint32_t)"
+
+.SS "#define BIT_MASK64(pos)   \fBBIT_MASK_HELPER\fP(pos, uint64_t)"
+
+.SS "#define BIT_MASK_HELPER(pos, type)   (~((type)(~0) << pos))"
+
+.SS "#define BIT_RESET(value, pos)   (value &= ~(1 << pos))"
+
+.SS "#define BIT_RESET_N(value, start_pos, n)   (value &= ~(\fBBIT_MASK\fP(n) << start_pos))"
+
+.SS "#define BIT_SET(value, pos)   (value |= (1 << pos))"
+
+.SS "#define BIT_SET_N(value, start_pos, n)   (value |= (\fBBIT_MASK\fP(n) << start_pos))"
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Bit Manipulation from the source code\&.
