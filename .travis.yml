@@ -1,7 +1,7 @@
 language: cpp
 python: 
   - "3.6"
-dist: bionic
+dist: focal
 compiler:
   - gcc
 os:
