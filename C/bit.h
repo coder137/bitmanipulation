@@ -44,6 +44,23 @@
  */
 #define BIT_RESET_N(value, start_pos, n) (value &= ~(BIT_MASK(n) << start_pos))
 
+/**
+ * @brief
+ * @param value The input variable to read from
+ * @param pos The position of the bit to read (0 indexed)
+ * @return UINT8
+ */
+#define BIT_READ(value, pos) ((value >> pos) & 0x01)
+
+/**
+ * @brief
+ * @param value The input variable to read from
+ * @param start_pos The starting position of the bit to read (0 indexed)
+ * @param n Number of bits to read
+ * @return UINT32
+ */
+#define BIT_READ_N(value, start_pos, n) ((value >> start_pos) & BIT_MASK(n))
+
 //
 // 64 BIT APIS
 //

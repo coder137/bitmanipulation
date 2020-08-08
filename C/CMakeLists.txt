@@ -31,3 +31,6 @@ add_bitmanipulation_test(bit_set_test test/bit_set_test.c)
 
 # BIT RESET TEST
 add_bitmanipulation_test(bit_reset_test test/bit_reset_test.c)
+
+# BIT READ TEST
+add_bitmanipulation_test(bit_read_test test/bit_read_test.c)
