@@ -1,4 +1,4 @@
-.TH "C/bit.h" 3 "Mon Aug 3 2020" "Bit Manipulation" \" -*- nroff -*-
+.TH "C/bit.h" 3 "Sat Aug 8 2020" "Bit Manipulation" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -32,6 +32,12 @@ C/bit.h
 .RI "#define \fBBIT_RESET_N\fP(value,  start_pos,  n)   (value &= ~(\fBBIT_MASK\fP(n) << start_pos))"
 .br
 .RI "Clear N BITS on the variable starting from a given position\&. "
+.ti -1c
+.RI "#define \fBBIT_READ\fP(value,  pos)   ((value >> pos) & 0x01)"
+.br
+.ti -1c
+.RI "#define \fBBIT_READ_N\fP(value,  start_pos,  n)   ((value >> start_pos) & \fBBIT_MASK\fP(n))"
+.br
 .ti -1c
 .RI "#define \fBBIT_MASK64\fP(n)   \fBBIT_MASK_HELPER\fP(n, uint64_t)"
 .br
@@ -90,6 +96,40 @@ A generic BIT MASK API for different datatypes\&.
 \fBReturns\fP
 .RS 4
 sizeof(type) 
+.RE
+.PP
+
+.SS "#define BIT_READ(value, pos)   ((value >> pos) & 0x01)"
+
+.PP
+\fBParameters\fP
+.RS 4
+\fIvalue\fP The input variable to read from 
+.br
+\fIpos\fP The position of the bit to read (0 indexed) 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+UINT8 
+.RE
+.PP
+
+.SS "#define BIT_READ_N(value, start_pos, n)   ((value >> start_pos) & \fBBIT_MASK\fP(n))"
+
+.PP
+\fBParameters\fP
+.RS 4
+\fIvalue\fP The input variable to read from 
+.br
+\fIstart_pos\fP The starting position of the bit to read (0 indexed) 
+.br
+\fIn\fP Number of bits to read 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+UINT32 
 .RE
 .PP
 
