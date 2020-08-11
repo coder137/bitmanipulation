@@ -13,7 +13,7 @@ before_install:
   # - sudo apt-add-repository -y 'deb https://apt.kitware.com/ubuntu/ bionic main'
   # - sudo apt-get -y install cmake
   - sudo add-apt-repository -y ppa:ubuntu-toolchain-r/test
-  - pip install cmake
+  - pip install cmake gcovr
 addons:
   apt:
     update: true
@@ -31,6 +31,7 @@ script:
   - ninja --version
   - gcc-9 --version
   - doxygen --version
+  - gcovr --version
   # Start Script
   # Doxygen Generator
   - mkdir docs
@@ -41,9 +42,13 @@ script:
   - cmake --build build --config Debug --target all
   - cd build
   - ctest -C Debug -T test --output-on-failure
-  - cd ../..
-  - pwd
-  # TODO, Add C++ Build
+  - cd ../
+  # C Code Coverage
+  - cmake --build build --target coverage
+  - cd ../
+  - cp -r C/build/coverage/ docs/html/c_coverage
+  - ls -la docs/html/c_coverage/
+  # TODO, Add C++ Build 
 deploy:
   provider: pages
   skip_cleanup: true

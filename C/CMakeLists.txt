@@ -11,13 +11,15 @@ target_include_directories(bit INTERFACE .)
 
 # TESTS
 set(WARNINGS_AS_ERRORS -Wall -Werror)
+set(GCOV_FLAGS -g -fprofile-arcs -ftest-coverage -O0)
 
 # TEST FUNCTION
 function(add_bitmanipulation_test test_name test_file)
     message("Test name [${test_name}] -> Test file [${test_file}]")
     add_executable(${test_name} ${test_file})
-    target_compile_options(${test_name} PRIVATE ${WARNINGS_AS_ERRORS})
-    target_link_libraries(${test_name} PRIVATE bit unity)
+    target_compile_options(${test_name} PRIVATE ${WARNINGS_AS_ERRORS} ${GCOV_FLAGS})
+    target_link_options(${test_name} PRIVATE ${GCOV_FLAGS})
+    target_link_libraries(${test_name} PRIVATE bit unity gcov)
     add_test(NAME ${test_name} COMMAND ${test_name})
 endfunction()
 
@@ -36,3 +38,12 @@ add_bitmanipulation_test(bit_read_test test/bit_read_test.c)
 
 # BIT FLIP TEST
 add_bitmanipulation_test(bit_flip_test test/bit_flip_test.c)
+
+# COVERAGE target
+add_custom_target(coverage
+    COMMAND ninja all
+    COMMAND ninja test
+    COMMAND gcovr -r ../ --html --html-details -o coverage/coverage.html
+    BYPRODUCTS coverage/coverage.html
+    VERBATIM USES_TERMINAL
+)
