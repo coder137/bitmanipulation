@@ -33,7 +33,8 @@
       <tab type="filelist" visible="yes" title="" intro=""/>
       <tab type="globals" visible="yes" title="" intro=""/>
     </tab>
-    <tab type="examples" visible="yes" title="" intro=""/>  
+    <tab type="examples" visible="yes" title="" intro=""/>
+    <tab type="user" visible="yes" url="c_coverage/coverage.html" title="C Coverage"/>
   </navindex>
 
   <!-- Layout definition for a class page -->
