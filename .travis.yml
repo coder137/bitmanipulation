@@ -46,7 +46,7 @@ script:
   # C Code Coverage
   - cmake --build build --target coverage
   - cd ../
-  - cp -r C/build/coverage docs/html/c_coverage/.
+  - cp -r C/build/coverage/ docs/html/c_coverage
   - ls -la docs/html/c_coverage/
   # TODO, Add C++ Build 
 deploy:
