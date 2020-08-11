@@ -30,7 +30,7 @@
 #define BIT_SET_N(value, start_pos, n) (value |= (BIT_MASK(n) << start_pos))
 
 /**
- * @brief Clear a BIT on the variable at a given position
+ * @brief Clear a BIT from the variable at a given position
  * @param value This output variable that is modified
  * @param pos The BIT position to clear data (0 indexed)
  */
@@ -45,7 +45,7 @@
 #define BIT_RESET_N(value, start_pos, n) (value &= ~(BIT_MASK(n) << start_pos))
 
 /**
- * @brief
+ * @brief Read a BIT value from the variable at a given position
  * @param value The input variable to read from
  * @param pos The position of the bit to read (0 indexed)
  * @return UINT8
@@ -53,13 +53,28 @@
 #define BIT_READ(value, pos) ((value >> pos) & 0x01)
 
 /**
- * @brief
+ * @brief Read N BIT values from the variable starting from a given position
  * @param value The input variable to read from
  * @param start_pos The starting position of the bit to read (0 indexed)
  * @param n Number of bits to read
  * @return UINT32
  */
 #define BIT_READ_N(value, start_pos, n) ((value >> start_pos) & BIT_MASK(n))
+
+/**
+ * @brief Flip a BIT from the variable at a given position
+ * @param value The output variable that is modified
+ * @param pos The position of the bit to flip (0 indexed)
+ */
+#define BIT_FLIP(value, pos) (value ^= (1 << pos))
+
+/**
+ * @brief Flip N BIT values from the variable starting from a given position
+ * @param value The output variable that is modified
+ * @param start_pos The starting position of the bit to flip (0 indexed)
+ * @param n Number of bits to flip
+ */
+#define BIT_FLIP_N(value, start_pos, n) (value ^= (BIT_MASK(n) << start_pos))
 
 //
 // 64 BIT APIS

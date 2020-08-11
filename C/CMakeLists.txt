@@ -9,7 +9,6 @@ enable_testing()
 add_library(bit INTERFACE)
 target_include_directories(bit INTERFACE .)
 
-
 # TESTS
 set(WARNINGS_AS_ERRORS -Wall -Werror)
 
@@ -34,3 +33,6 @@ add_bitmanipulation_test(bit_reset_test test/bit_reset_test.c)
 
 # BIT READ TEST
 add_bitmanipulation_test(bit_read_test test/bit_read_test.c)
+
+# BIT FLIP TEST
+add_bitmanipulation_test(bit_flip_test test/bit_flip_test.c)
