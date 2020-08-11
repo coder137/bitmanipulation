@@ -1,0 +1,46 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+<HTML><HEAD></HEAD><BODY>
+<OBJECT type="text/site properties">
+<param name="FrameName" value="right">
+</OBJECT>
+<UL>
+<LI><OBJECT type="text/sitemap"><param name="Name" value="Bit Manipulation"><param name="Local" value="index.html#autotoc_md0"><param name="ImageNumber" value="11"></OBJECT>
+<LI><OBJECT type="text/sitemap"><param name="Name" value="Usage"><param name="Local" value="index.html#autotoc_md1"><param name="ImageNumber" value="11"></OBJECT>
+<LI><OBJECT type="text/sitemap"><param name="Name" value="Build Process"><param name="Local" value="index.html#autotoc_md2"><param name="ImageNumber" value="1"></OBJECT>
+  <UL>
+  <LI><OBJECT type="text/sitemap"><param name="Name" value="Clone the repository"><param name="Local" value="index.html#autotoc_md3"><param name="ImageNumber" value="11"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Name" value="Generate and build library"><param name="Local" value="index.html#autotoc_md4"><param name="ImageNumber" value="11"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Name" value="Running Tests"><param name="Local" value="index.html#autotoc_md5"><param name="ImageNumber" value="11"></OBJECT>
+  </UL>
+<LI><OBJECT type="text/sitemap"><param name="Name" value="Files"><param name="Local" value="files.html"><param name="ImageNumber" value="1"></OBJECT>
+  <UL>
+  <LI><OBJECT type="text/sitemap"><param name="Name" value="File List"><param name="Local" value="files.html"><param name="ImageNumber" value="1"></OBJECT>
+    <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Name" value="C"><param name="Local" value="dir_af99bb3c152a306abd27951285ad1127.html"><param name="ImageNumber" value="1"></OBJECT>
+      <UL>
+      <LI><OBJECT type="text/sitemap"><param name="Name" value="bit.h"><param name="Local" value="bit_8h.html"><param name="ImageNumber" value="1"></OBJECT>
+        <UL>
+        <LI><OBJECT type="text/sitemap"><param name="Name" value="BIT_FLIP"><param name="Local" value="bit_8h.html#a29b7186a419acc0f7aa47b40e5f29bca"><param name="ImageNumber" value="11"></OBJECT>
+        <LI><OBJECT type="text/sitemap"><param name="Name" value="BIT_FLIP_N"><param name="Local" value="bit_8h.html#a2e8be0491f79706764490dbd0d135094"><param name="ImageNumber" value="11"></OBJECT>
+        <LI><OBJECT type="text/sitemap"><param name="Name" value="BIT_MASK"><param name="Local" value="bit_8h.html#a3c12c6d36ad0aa481a3436923d21f4f8"><param name="ImageNumber" value="11"></OBJECT>
+        <LI><OBJECT type="text/sitemap"><param name="Name" value="BIT_MASK64"><param name="Local" value="bit_8h.html#a1d49978a2c60e8a4934cf1ffd7de10e2"><param name="ImageNumber" value="11"></OBJECT>
+        <LI><OBJECT type="text/sitemap"><param name="Name" value="BIT_MASK_HELPER"><param name="Local" value="bit_8h.html#a7d0460bbe1041be6fdf22fd2f9e85f46"><param name="ImageNumber" value="11"></OBJECT>
+        <LI><OBJECT type="text/sitemap"><param name="Name" value="BIT_READ"><param name="Local" value="bit_8h.html#a6449d27a13901752547a9f0ec60317f5"><param name="ImageNumber" value="11"></OBJECT>
+        <LI><OBJECT type="text/sitemap"><param name="Name" value="BIT_READ_N"><param name="Local" value="bit_8h.html#a49854f34543c6aabf9b71517308ce194"><param name="ImageNumber" value="11"></OBJECT>
+        <LI><OBJECT type="text/sitemap"><param name="Name" value="BIT_RESET"><param name="Local" value="bit_8h.html#a7b5507c765b63d36f04f262106c97872"><param name="ImageNumber" value="11"></OBJECT>
+        <LI><OBJECT type="text/sitemap"><param name="Name" value="BIT_RESET_N"><param name="Local" value="bit_8h.html#a916fcef68710e4ffc501703e3f262bcc"><param name="ImageNumber" value="11"></OBJECT>
+        <LI><OBJECT type="text/sitemap"><param name="Name" value="BIT_SET"><param name="Local" value="bit_8h.html#aa4118521cb27055d7b32c169539b3003"><param name="ImageNumber" value="11"></OBJECT>
+        <LI><OBJECT type="text/sitemap"><param name="Name" value="BIT_SET_N"><param name="Local" value="bit_8h.html#a57fb93c797c6f17edd47b511323f32cf"><param name="ImageNumber" value="11"></OBJECT>
+        </UL>
+      </UL>
+    </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Name" value="File Members"><param name="Local" value="globals.html"><param name="ImageNumber" value="11"></OBJECT>
+    <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Name" value="All"><param name="Local" value="globals.html"><param name="ImageNumber" value="11"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Name" value="Macros"><param name="Local" value="globals_defs.html"><param name="ImageNumber" value="11"></OBJECT>
+    </UL>
+  </UL>
+<LI><OBJECT type="text/sitemap"><param name="Name" value="C Coverage"><param name="Local" value="c_coverage/coverage.html"><param name="ImageNumber" value="1"></OBJECT>
+</UL>
+</BODY>
+</HTML>
