@@ -18,16 +18,18 @@
  * @brief Set a BIT on the variable at a given position
  * @param value The output variable that is modified
  * @param pos The BIT position to set data (0 indexed)
+ * @return UINT32
  */
-#define BIT_SET(value, pos) (value |= (1 << pos))
+#define BIT_SET(value, pos) (value | (1 << pos))
 
 /**
  * @brief Set N BITS on the variable starting from a given position
  * @param value The output variable that is modified
  * @param start_pos The starting position of the bit (0 indexed)
  * @param n The number of bits used
+ * @return UINT32
  */
-#define BIT_SET_N(value, start_pos, n) (value |= (BIT_MASK(n) << start_pos))
+#define BIT_SET_N(value, start_pos, n) (value | (BIT_MASK(n) << start_pos))
 
 /**
  * @brief Clear a BIT from the variable at a given position

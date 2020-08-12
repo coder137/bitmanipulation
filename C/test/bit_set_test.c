@@ -8,10 +8,28 @@ void setUp() { set = 0; }
 void tearDown() {}
 
 void test_bit_set(void) {
+  uint32_t value = 0;
+
+  // Manual
+  value = BIT_SET(set, 0);
+  TEST_ASSERT_EQUAL_UINT32(value, 1);
+
+  value = BIT_SET(set, 1);
+  TEST_ASSERT_EQUAL_UINT32(value, 0x02);
+
+  value = BIT_SET(set, 2);
+  TEST_ASSERT_EQUAL_UINT32(value, 0x04);
+
+  value = BIT_SET(set, 3);
+  TEST_ASSERT_EQUAL_UINT32(value, 0x08);
+
+  value = BIT_SET(set, 4);
+  TEST_ASSERT_EQUAL_UINT32(value, 0x10);
+
+  // Automated
   for (int i = 0; i < 32; i++) {
-    set = 0;
-    BIT_SET(set, i);
-    TEST_ASSERT_EQUAL_UINT32(set, (1 << i));
+    value = BIT_SET(set, i);
+    TEST_ASSERT_EQUAL_UINT32(value, (1 << i));
   }
 
   // Overflow will cause a -Wshift-count-overflow compile time error
@@ -19,9 +37,8 @@ void test_bit_set(void) {
 }
 
 static void test_bit_set_n(uint8_t start_pos, uint8_t n, uint32_t actual) {
-  set = 0;
-  BIT_SET_N(set, start_pos, n);
-  TEST_ASSERT_EQUAL_UINT32(set, actual);
+  uint32_t value = BIT_SET_N(set, start_pos, n);
+  TEST_ASSERT_EQUAL_UINT32(value, actual);
 }
 
 void test_bit_set_n_different_bit_mask(void) {
