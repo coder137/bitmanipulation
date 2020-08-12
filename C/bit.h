@@ -69,16 +69,18 @@
  * @brief Flip a BIT from the variable at a given position
  * @param value The output variable that is modified
  * @param pos The position of the bit to flip (0 indexed)
+ * @return UINT32
  */
-#define BIT_FLIP(value, pos) (value ^= (1 << pos))
+#define BIT_FLIP(value, pos) (value ^ (1 << pos))
 
 /**
  * @brief Flip N BIT values from the variable starting from a given position
  * @param value The output variable that is modified
  * @param start_pos The starting position of the bit to flip (0 indexed)
  * @param n Number of bits to flip
+ * @return UINT32
  */
-#define BIT_FLIP_N(value, start_pos, n) (value ^= (BIT_MASK(n) << start_pos))
+#define BIT_FLIP_N(value, start_pos, n) (value ^ (BIT_MASK(n) << start_pos))
 
 //
 // 64 BIT APIS
