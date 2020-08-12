@@ -8,26 +8,25 @@ void setUp() { reset = ~0; }
 void tearDown() {}
 
 void test_bit_reset(void) {
-  // Check manually
-  BIT_RESET(reset, 0);
-  TEST_ASSERT_EQUAL_UINT32(reset, 0xFFFFFFFE);
+  uint32_t value = 0;
 
-  reset = ~0;
-  BIT_RESET(reset, 3);
-  TEST_ASSERT_EQUAL_UINT32(reset, 0xFFFFFFF7);
+  // Check manually
+  value = BIT_RESET(reset, 0);
+  TEST_ASSERT_EQUAL_UINT32(value, 0xFFFFFFFE);
+
+  value = BIT_RESET(reset, 3);
+  TEST_ASSERT_EQUAL_UINT32(value, 0xFFFFFFF7);
 
   // Check automated
   for (int i = 0; i < 32; i++) {
-    reset = ~0;
-    BIT_RESET(reset, i);
-    TEST_ASSERT_EQUAL_UINT32(reset, ~(1 << i));
+    value = BIT_RESET(reset, i);
+    TEST_ASSERT_EQUAL_UINT32(value, ~(1 << i));
   }
 }
 
 static void test_bit_reset_n(uint8_t start_pos, uint8_t n, uint32_t actual) {
-  reset = ~0;
-  BIT_RESET_N(reset, start_pos, n);
-  TEST_ASSERT_EQUAL_UINT32(reset, actual);
+  uint32_t value = BIT_RESET_N(reset, start_pos, n);
+  TEST_ASSERT_EQUAL_UINT32(value, actual);
 }
 
 void test_bit_reset_n_different_bit_mask(void) {
