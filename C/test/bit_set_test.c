@@ -11,24 +11,24 @@ void test_bit_set(void) {
   uint32_t value = 0;
 
   // Manual
-  value = BIT_SET(set, 0);
+  value = BIT_SET_1(set, 0);
   TEST_ASSERT_EQUAL_UINT32(value, 1);
 
-  value = BIT_SET(set, 1);
+  value = BIT_SET_1(set, 1);
   TEST_ASSERT_EQUAL_UINT32(value, 0x02);
 
-  value = BIT_SET(set, 2);
+  value = BIT_SET_1(set, 2);
   TEST_ASSERT_EQUAL_UINT32(value, 0x04);
 
-  value = BIT_SET(set, 3);
+  value = BIT_SET_1(set, 3);
   TEST_ASSERT_EQUAL_UINT32(value, 0x08);
 
-  value = BIT_SET(set, 4);
+  value = BIT_SET_1(set, 4);
   TEST_ASSERT_EQUAL_UINT32(value, 0x10);
 
   // Automated
   for (int i = 0; i < 32; i++) {
-    value = BIT_SET(set, i);
+    value = BIT_SET_1(set, i);
     TEST_ASSERT_EQUAL_UINT32(value, (1 << i));
   }
 

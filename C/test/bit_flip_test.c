@@ -9,16 +9,16 @@ void test_bit_flip(void) {
   uint32_t flip = 0x11;
   uint32_t value = 0;
 
-  value = BIT_FLIP(flip, 0);
+  value = BIT_FLIP_1(flip, 0);
   TEST_ASSERT_EQUAL_UINT32(value, 0x10);
 
-  value = BIT_FLIP(flip, 1);
+  value = BIT_FLIP_1(flip, 1);
   TEST_ASSERT_EQUAL_UINT32(value, 0x13);
 
-  value = BIT_FLIP(flip, 4);
+  value = BIT_FLIP_1(flip, 4);
   TEST_ASSERT_EQUAL_UINT32(value, 0x01);
 
-  value = BIT_FLIP(flip, 5);
+  value = BIT_FLIP_1(flip, 5);
   TEST_ASSERT_EQUAL_UINT32(value, 0x31);
 }
 
