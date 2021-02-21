@@ -1,4 +1,4 @@
-.TH "C/bit.h" 3 "Wed Aug 12 2020" "Bit Manipulation" \" -*- nroff -*-
+.TH "C/bit.h" 3 "Sun Feb 21 2021" "Bit Manipulation" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -17,37 +17,37 @@ C/bit.h
 .br
 .RI "Creates a UINT32 BITMASK of size n\&. "
 .ti -1c
-.RI "#define \fBBIT_SET\fP(value,  pos)   (value | (1 << pos))"
+.RI "#define \fBBIT_SET_1\fP(var,  pos)   (var | (1 << pos))"
 .br
 .RI "Set a BIT on the variable at a given position\&. "
 .ti -1c
-.RI "#define \fBBIT_SET_N\fP(value,  start_pos,  n)   (value | (\fBBIT_MASK\fP(n) << start_pos))"
+.RI "#define \fBBIT_SET_N\fP(var,  start_pos,  n)   (var | (\fBBIT_MASK\fP(n) << start_pos))"
 .br
 .RI "Set N BITS on the variable starting from a given position\&. "
 .ti -1c
-.RI "#define \fBBIT_RESET\fP(value,  pos)   (value & ~(1 << pos))"
+.RI "#define \fBBIT_RESET_1\fP(var,  pos)   (var & ~(1 << pos))"
 .br
 .RI "Clear a BIT from the variable at a given position\&. "
 .ti -1c
-.RI "#define \fBBIT_RESET_N\fP(value,  start_pos,  n)   (value & ~(\fBBIT_MASK\fP(n) << start_pos))"
+.RI "#define \fBBIT_RESET_N\fP(var,  start_pos,  n)   (var & ~(\fBBIT_MASK\fP(n) << start_pos))"
 .br
 .RI "Clear N BITS on the variable starting from a given position\&. "
 .ti -1c
-.RI "#define \fBBIT_READ\fP(value,  pos)   ((value >> pos) & 0x01)"
+.RI "#define \fBBIT_READ_1\fP(var,  pos)   ((var >> pos) & 0x01)"
 .br
-.RI "Read a BIT value from the variable at a given position\&. "
+.RI "Read a BIT var from the variable at a given position\&. "
 .ti -1c
-.RI "#define \fBBIT_READ_N\fP(value,  start_pos,  n)   ((value >> start_pos) & \fBBIT_MASK\fP(n))"
+.RI "#define \fBBIT_READ_N\fP(var,  start_pos,  n)   ((var >> start_pos) & \fBBIT_MASK\fP(n))"
 .br
-.RI "Read N BIT values from the variable starting from a given position\&. "
+.RI "Read N BIT vars from the variable starting from a given position\&. "
 .ti -1c
-.RI "#define \fBBIT_FLIP\fP(value,  pos)   (value ^ (1 << pos))"
+.RI "#define \fBBIT_FLIP_1\fP(var,  pos)   (var ^ (1 << pos))"
 .br
-.RI "Flip a BIT from the variable at a given position\&. "
+.RI "Flip a BIT at a given position\&. "
 .ti -1c
-.RI "#define \fBBIT_FLIP_N\fP(value,  start_pos,  n)   (value ^ (\fBBIT_MASK\fP(n) << start_pos))"
+.RI "#define \fBBIT_FLIP_N\fP(var,  start_pos,  n)   (var ^ (\fBBIT_MASK\fP(n) << start_pos))"
 .br
-.RI "Flip N BIT values from the variable starting from a given position\&. "
+.RI "Flip N BITS starting from a given position\&. "
 .ti -1c
 .RI "#define \fBBIT_MASK64\fP(n)   \fBBIT_MASK_HELPER\fP(n, uint64_t)"
 .br
@@ -59,14 +59,14 @@ C/bit.h
 .in -1c
 .SH "Macro Definition Documentation"
 .PP 
-.SS "#define BIT_FLIP(value, pos)   (value ^ (1 << pos))"
+.SS "#define BIT_FLIP_1(var, pos)   (var ^ (1 << pos))"
 
 .PP
-Flip a BIT from the variable at a given position\&. 
+Flip a BIT at a given position\&. 
 .PP
 \fBParameters\fP
 .RS 4
-\fIvalue\fP The output variable that is modified 
+\fIvar\fP The output variable that is modified 
 .br
 \fIpos\fP The position of the bit to flip (0 indexed) 
 .RE
@@ -77,14 +77,14 @@ UINT32
 .RE
 .PP
 
-.SS "#define BIT_FLIP_N(value, start_pos, n)   (value ^ (\fBBIT_MASK\fP(n) << start_pos))"
+.SS "#define BIT_FLIP_N(var, start_pos, n)   (var ^ (\fBBIT_MASK\fP(n) << start_pos))"
 
 .PP
-Flip N BIT values from the variable starting from a given position\&. 
+Flip N BITS starting from a given position\&. 
 .PP
 \fBParameters\fP
 .RS 4
-\fIvalue\fP The output variable that is modified 
+\fIvar\fP The output variable that is modified 
 .br
 \fIstart_pos\fP The starting position of the bit to flip (0 indexed) 
 .br
@@ -147,14 +147,14 @@ sizeof(type)
 .RE
 .PP
 
-.SS "#define BIT_READ(value, pos)   ((value >> pos) & 0x01)"
+.SS "#define BIT_READ_1(var, pos)   ((var >> pos) & 0x01)"
 
 .PP
-Read a BIT value from the variable at a given position\&. 
+Read a BIT var from the variable at a given position\&. 
 .PP
 \fBParameters\fP
 .RS 4
-\fIvalue\fP The input variable to read from 
+\fIvar\fP The input variable to read from 
 .br
 \fIpos\fP The position of the bit to read (0 indexed) 
 .RE
@@ -165,14 +165,14 @@ UINT8
 .RE
 .PP
 
-.SS "#define BIT_READ_N(value, start_pos, n)   ((value >> start_pos) & \fBBIT_MASK\fP(n))"
+.SS "#define BIT_READ_N(var, start_pos, n)   ((var >> start_pos) & \fBBIT_MASK\fP(n))"
 
 .PP
-Read N BIT values from the variable starting from a given position\&. 
+Read N BIT vars from the variable starting from a given position\&. 
 .PP
 \fBParameters\fP
 .RS 4
-\fIvalue\fP The input variable to read from 
+\fIvar\fP The input variable to read from 
 .br
 \fIstart_pos\fP The starting position of the bit to read (0 indexed) 
 .br
@@ -185,14 +185,14 @@ UINT32
 .RE
 .PP
 
-.SS "#define BIT_RESET(value, pos)   (value & ~(1 << pos))"
+.SS "#define BIT_RESET_1(var, pos)   (var & ~(1 << pos))"
 
 .PP
 Clear a BIT from the variable at a given position\&. 
 .PP
 \fBParameters\fP
 .RS 4
-\fIvalue\fP This output variable that is modified 
+\fIvar\fP This output variable that is modified 
 .br
 \fIpos\fP The BIT position to clear data (0 indexed) 
 .RE
@@ -203,14 +203,14 @@ UINT32
 .RE
 .PP
 
-.SS "#define BIT_RESET_N(value, start_pos, n)   (value & ~(\fBBIT_MASK\fP(n) << start_pos))"
+.SS "#define BIT_RESET_N(var, start_pos, n)   (var & ~(\fBBIT_MASK\fP(n) << start_pos))"
 
 .PP
 Clear N BITS on the variable starting from a given position\&. 
 .PP
 \fBParameters\fP
 .RS 4
-\fIvalue\fP The output variable that is modified 
+\fIvar\fP The output variable that is modified 
 .br
 \fIstart_pos\fP The starting position of the bit (0 indexed) 
 .br
@@ -223,14 +223,14 @@ UINT32
 .RE
 .PP
 
-.SS "#define BIT_SET(value, pos)   (value | (1 << pos))"
+.SS "#define BIT_SET_1(var, pos)   (var | (1 << pos))"
 
 .PP
 Set a BIT on the variable at a given position\&. 
 .PP
 \fBParameters\fP
 .RS 4
-\fIvalue\fP The output variable that is modified 
+\fIvar\fP The output variable that is modified 
 .br
 \fIpos\fP The BIT position to set data (0 indexed) 
 .RE
@@ -241,14 +241,14 @@ UINT32
 .RE
 .PP
 
-.SS "#define BIT_SET_N(value, start_pos, n)   (value | (\fBBIT_MASK\fP(n) << start_pos))"
+.SS "#define BIT_SET_N(var, start_pos, n)   (var | (\fBBIT_MASK\fP(n) << start_pos))"
 
 .PP
 Set N BITS on the variable starting from a given position\&. 
 .PP
 \fBParameters\fP
 .RS 4
-\fIvalue\fP The output variable that is modified 
+\fIvar\fP The output variable that is modified 
 .br
 \fIstart_pos\fP The starting position of the bit (0 indexed) 
 .br

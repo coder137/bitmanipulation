@@ -61,30 +61,30 @@ Macros</h2></td></tr>
 <tr class="memitem:a3c12c6d36ad0aa481a3436923d21f4f8"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bit_8h.html#a3c12c6d36ad0aa481a3436923d21f4f8">BIT_MASK</a>(n)&#160;&#160;&#160;<a class="el" href="bit_8h.html#a7d0460bbe1041be6fdf22fd2f9e85f46">BIT_MASK_HELPER</a>(n, uint32_t)</td></tr>
 <tr class="memdesc:a3c12c6d36ad0aa481a3436923d21f4f8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a UINT32 BITMASK of size n.  <a href="bit_8h.html#a3c12c6d36ad0aa481a3436923d21f4f8">More...</a><br /></td></tr>
 <tr class="separator:a3c12c6d36ad0aa481a3436923d21f4f8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa4118521cb27055d7b32c169539b3003"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bit_8h.html#aa4118521cb27055d7b32c169539b3003">BIT_SET</a>(value,  pos)&#160;&#160;&#160;(value | (1 &lt;&lt; pos))</td></tr>
-<tr class="memdesc:aa4118521cb27055d7b32c169539b3003"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set a BIT on the variable at a given position.  <a href="bit_8h.html#aa4118521cb27055d7b32c169539b3003">More...</a><br /></td></tr>
-<tr class="separator:aa4118521cb27055d7b32c169539b3003"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a57fb93c797c6f17edd47b511323f32cf"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bit_8h.html#a57fb93c797c6f17edd47b511323f32cf">BIT_SET_N</a>(value,  start_pos,  n)&#160;&#160;&#160;(value | (<a class="el" href="bit_8h.html#a3c12c6d36ad0aa481a3436923d21f4f8">BIT_MASK</a>(n) &lt;&lt; start_pos))</td></tr>
-<tr class="memdesc:a57fb93c797c6f17edd47b511323f32cf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set N BITS on the variable starting from a given position.  <a href="bit_8h.html#a57fb93c797c6f17edd47b511323f32cf">More...</a><br /></td></tr>
-<tr class="separator:a57fb93c797c6f17edd47b511323f32cf"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7b5507c765b63d36f04f262106c97872"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bit_8h.html#a7b5507c765b63d36f04f262106c97872">BIT_RESET</a>(value,  pos)&#160;&#160;&#160;(value &amp; ~(1 &lt;&lt; pos))</td></tr>
-<tr class="memdesc:a7b5507c765b63d36f04f262106c97872"><td class="mdescLeft">&#160;</td><td class="mdescRight">Clear a BIT from the variable at a given position.  <a href="bit_8h.html#a7b5507c765b63d36f04f262106c97872">More...</a><br /></td></tr>
-<tr class="separator:a7b5507c765b63d36f04f262106c97872"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a916fcef68710e4ffc501703e3f262bcc"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bit_8h.html#a916fcef68710e4ffc501703e3f262bcc">BIT_RESET_N</a>(value,  start_pos,  n)&#160;&#160;&#160;(value &amp; ~(<a class="el" href="bit_8h.html#a3c12c6d36ad0aa481a3436923d21f4f8">BIT_MASK</a>(n) &lt;&lt; start_pos))</td></tr>
-<tr class="memdesc:a916fcef68710e4ffc501703e3f262bcc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Clear N BITS on the variable starting from a given position.  <a href="bit_8h.html#a916fcef68710e4ffc501703e3f262bcc">More...</a><br /></td></tr>
-<tr class="separator:a916fcef68710e4ffc501703e3f262bcc"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6449d27a13901752547a9f0ec60317f5"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bit_8h.html#a6449d27a13901752547a9f0ec60317f5">BIT_READ</a>(value,  pos)&#160;&#160;&#160;((value &gt;&gt; pos) &amp; 0x01)</td></tr>
-<tr class="memdesc:a6449d27a13901752547a9f0ec60317f5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Read a BIT value from the variable at a given position.  <a href="bit_8h.html#a6449d27a13901752547a9f0ec60317f5">More...</a><br /></td></tr>
-<tr class="separator:a6449d27a13901752547a9f0ec60317f5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a49854f34543c6aabf9b71517308ce194"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bit_8h.html#a49854f34543c6aabf9b71517308ce194">BIT_READ_N</a>(value,  start_pos,  n)&#160;&#160;&#160;((value &gt;&gt; start_pos) &amp; <a class="el" href="bit_8h.html#a3c12c6d36ad0aa481a3436923d21f4f8">BIT_MASK</a>(n))</td></tr>
-<tr class="memdesc:a49854f34543c6aabf9b71517308ce194"><td class="mdescLeft">&#160;</td><td class="mdescRight">Read N BIT values from the variable starting from a given position.  <a href="bit_8h.html#a49854f34543c6aabf9b71517308ce194">More...</a><br /></td></tr>
-<tr class="separator:a49854f34543c6aabf9b71517308ce194"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a29b7186a419acc0f7aa47b40e5f29bca"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bit_8h.html#a29b7186a419acc0f7aa47b40e5f29bca">BIT_FLIP</a>(value,  pos)&#160;&#160;&#160;(value ^ (1 &lt;&lt; pos))</td></tr>
-<tr class="memdesc:a29b7186a419acc0f7aa47b40e5f29bca"><td class="mdescLeft">&#160;</td><td class="mdescRight">Flip a BIT from the variable at a given position.  <a href="bit_8h.html#a29b7186a419acc0f7aa47b40e5f29bca">More...</a><br /></td></tr>
-<tr class="separator:a29b7186a419acc0f7aa47b40e5f29bca"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2e8be0491f79706764490dbd0d135094"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bit_8h.html#a2e8be0491f79706764490dbd0d135094">BIT_FLIP_N</a>(value,  start_pos,  n)&#160;&#160;&#160;(value ^ (<a class="el" href="bit_8h.html#a3c12c6d36ad0aa481a3436923d21f4f8">BIT_MASK</a>(n) &lt;&lt; start_pos))</td></tr>
-<tr class="memdesc:a2e8be0491f79706764490dbd0d135094"><td class="mdescLeft">&#160;</td><td class="mdescRight">Flip N BIT values from the variable starting from a given position.  <a href="bit_8h.html#a2e8be0491f79706764490dbd0d135094">More...</a><br /></td></tr>
-<tr class="separator:a2e8be0491f79706764490dbd0d135094"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1bba3d65b97e468e3fa42fc9b160b9f6"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bit_8h.html#a1bba3d65b97e468e3fa42fc9b160b9f6">BIT_SET_1</a>(var,  pos)&#160;&#160;&#160;(var | (1 &lt;&lt; pos))</td></tr>
+<tr class="memdesc:a1bba3d65b97e468e3fa42fc9b160b9f6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set a BIT on the variable at a given position.  <a href="bit_8h.html#a1bba3d65b97e468e3fa42fc9b160b9f6">More...</a><br /></td></tr>
+<tr class="separator:a1bba3d65b97e468e3fa42fc9b160b9f6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad2120a8967e969d05e4e3be573eb4910"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bit_8h.html#ad2120a8967e969d05e4e3be573eb4910">BIT_SET_N</a>(var,  start_pos,  n)&#160;&#160;&#160;(var | (<a class="el" href="bit_8h.html#a3c12c6d36ad0aa481a3436923d21f4f8">BIT_MASK</a>(n) &lt;&lt; start_pos))</td></tr>
+<tr class="memdesc:ad2120a8967e969d05e4e3be573eb4910"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set N BITS on the variable starting from a given position.  <a href="bit_8h.html#ad2120a8967e969d05e4e3be573eb4910">More...</a><br /></td></tr>
+<tr class="separator:ad2120a8967e969d05e4e3be573eb4910"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aab2862e7851295eb7a04ce3754b5320d"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bit_8h.html#aab2862e7851295eb7a04ce3754b5320d">BIT_RESET_1</a>(var,  pos)&#160;&#160;&#160;(var &amp; ~(1 &lt;&lt; pos))</td></tr>
+<tr class="memdesc:aab2862e7851295eb7a04ce3754b5320d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Clear a BIT from the variable at a given position.  <a href="bit_8h.html#aab2862e7851295eb7a04ce3754b5320d">More...</a><br /></td></tr>
+<tr class="separator:aab2862e7851295eb7a04ce3754b5320d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8177577e16e522ce813cc289a973aea2"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bit_8h.html#a8177577e16e522ce813cc289a973aea2">BIT_RESET_N</a>(var,  start_pos,  n)&#160;&#160;&#160;(var &amp; ~(<a class="el" href="bit_8h.html#a3c12c6d36ad0aa481a3436923d21f4f8">BIT_MASK</a>(n) &lt;&lt; start_pos))</td></tr>
+<tr class="memdesc:a8177577e16e522ce813cc289a973aea2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Clear N BITS on the variable starting from a given position.  <a href="bit_8h.html#a8177577e16e522ce813cc289a973aea2">More...</a><br /></td></tr>
+<tr class="separator:a8177577e16e522ce813cc289a973aea2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afdbc889f27b8d4d0bcbcfe0c72d0df99"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bit_8h.html#afdbc889f27b8d4d0bcbcfe0c72d0df99">BIT_READ_1</a>(var,  pos)&#160;&#160;&#160;((var &gt;&gt; pos) &amp; 0x01)</td></tr>
+<tr class="memdesc:afdbc889f27b8d4d0bcbcfe0c72d0df99"><td class="mdescLeft">&#160;</td><td class="mdescRight">Read a BIT var from the variable at a given position.  <a href="bit_8h.html#afdbc889f27b8d4d0bcbcfe0c72d0df99">More...</a><br /></td></tr>
+<tr class="separator:afdbc889f27b8d4d0bcbcfe0c72d0df99"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad22981e28d383a782cb8bd9e85dac4fd"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bit_8h.html#ad22981e28d383a782cb8bd9e85dac4fd">BIT_READ_N</a>(var,  start_pos,  n)&#160;&#160;&#160;((var &gt;&gt; start_pos) &amp; <a class="el" href="bit_8h.html#a3c12c6d36ad0aa481a3436923d21f4f8">BIT_MASK</a>(n))</td></tr>
+<tr class="memdesc:ad22981e28d383a782cb8bd9e85dac4fd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Read N BIT vars from the variable starting from a given position.  <a href="bit_8h.html#ad22981e28d383a782cb8bd9e85dac4fd">More...</a><br /></td></tr>
+<tr class="separator:ad22981e28d383a782cb8bd9e85dac4fd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa615562132cb65b7acbec2c7b2dc3b1d"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bit_8h.html#aa615562132cb65b7acbec2c7b2dc3b1d">BIT_FLIP_1</a>(var,  pos)&#160;&#160;&#160;(var ^ (1 &lt;&lt; pos))</td></tr>
+<tr class="memdesc:aa615562132cb65b7acbec2c7b2dc3b1d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Flip a BIT at a given position.  <a href="bit_8h.html#aa615562132cb65b7acbec2c7b2dc3b1d">More...</a><br /></td></tr>
+<tr class="separator:aa615562132cb65b7acbec2c7b2dc3b1d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae3a6e1820e87595977b27c534995f215"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bit_8h.html#ae3a6e1820e87595977b27c534995f215">BIT_FLIP_N</a>(var,  start_pos,  n)&#160;&#160;&#160;(var ^ (<a class="el" href="bit_8h.html#a3c12c6d36ad0aa481a3436923d21f4f8">BIT_MASK</a>(n) &lt;&lt; start_pos))</td></tr>
+<tr class="memdesc:ae3a6e1820e87595977b27c534995f215"><td class="mdescLeft">&#160;</td><td class="mdescRight">Flip N BITS starting from a given position.  <a href="bit_8h.html#ae3a6e1820e87595977b27c534995f215">More...</a><br /></td></tr>
+<tr class="separator:ae3a6e1820e87595977b27c534995f215"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1d49978a2c60e8a4934cf1ffd7de10e2"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bit_8h.html#a1d49978a2c60e8a4934cf1ffd7de10e2">BIT_MASK64</a>(n)&#160;&#160;&#160;<a class="el" href="bit_8h.html#a7d0460bbe1041be6fdf22fd2f9e85f46">BIT_MASK_HELPER</a>(n, uint64_t)</td></tr>
 <tr class="memdesc:a1d49978a2c60e8a4934cf1ffd7de10e2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a UINT64 BITMASK of size n.  <a href="bit_8h.html#a1d49978a2c60e8a4934cf1ffd7de10e2">More...</a><br /></td></tr>
 <tr class="separator:a1d49978a2c60e8a4934cf1ffd7de10e2"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -93,17 +93,17 @@ Macros</h2></td></tr>
 <tr class="separator:a7d0460bbe1041be6fdf22fd2f9e85f46"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Macro Definition Documentation</h2>
-<a id="a29b7186a419acc0f7aa47b40e5f29bca"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a29b7186a419acc0f7aa47b40e5f29bca">&#9670;&nbsp;</a></span>BIT_FLIP</h2>
+<a id="aa615562132cb65b7acbec2c7b2dc3b1d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa615562132cb65b7acbec2c7b2dc3b1d">&#9670;&nbsp;</a></span>BIT_FLIP_1</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">#define BIT_FLIP</td>
+          <td class="memname">#define BIT_FLIP_1</td>
           <td>(</td>
           <td class="paramtype">&#160;</td>
-          <td class="paramname">value, </td>
+          <td class="paramname">var, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -114,15 +114,15 @@ Macros</h2></td></tr>
         <tr>
           <td></td>
           <td>)</td>
-          <td></td><td>&#160;&#160;&#160;(value ^ (1 &lt;&lt; pos))</td>
+          <td></td><td>&#160;&#160;&#160;(var ^ (1 &lt;&lt; pos))</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p>Flip a BIT from the variable at a given position. </p>
+<p>Flip a BIT at a given position. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">value</td><td>The output variable that is modified </td></tr>
+    <tr><td class="paramname">var</td><td>The output variable that is modified </td></tr>
     <tr><td class="paramname">pos</td><td>The position of the bit to flip (0 indexed) </td></tr>
   </table>
   </dd>
@@ -131,8 +131,8 @@ Macros</h2></td></tr>
 
 </div>
 </div>
-<a id="a2e8be0491f79706764490dbd0d135094"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a2e8be0491f79706764490dbd0d135094">&#9670;&nbsp;</a></span>BIT_FLIP_N</h2>
+<a id="ae3a6e1820e87595977b27c534995f215"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae3a6e1820e87595977b27c534995f215">&#9670;&nbsp;</a></span>BIT_FLIP_N</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -141,7 +141,7 @@ Macros</h2></td></tr>
           <td class="memname">#define BIT_FLIP_N</td>
           <td>(</td>
           <td class="paramtype">&#160;</td>
-          <td class="paramname">value, </td>
+          <td class="paramname">var, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -158,15 +158,15 @@ Macros</h2></td></tr>
         <tr>
           <td></td>
           <td>)</td>
-          <td></td><td>&#160;&#160;&#160;(value ^ (<a class="el" href="bit_8h.html#a3c12c6d36ad0aa481a3436923d21f4f8">BIT_MASK</a>(n) &lt;&lt; start_pos))</td>
+          <td></td><td>&#160;&#160;&#160;(var ^ (<a class="el" href="bit_8h.html#a3c12c6d36ad0aa481a3436923d21f4f8">BIT_MASK</a>(n) &lt;&lt; start_pos))</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p>Flip N BIT values from the variable starting from a given position. </p>
+<p>Flip N BITS starting from a given position. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">value</td><td>The output variable that is modified </td></tr>
+    <tr><td class="paramname">var</td><td>The output variable that is modified </td></tr>
     <tr><td class="paramname">start_pos</td><td>The starting position of the bit to flip (0 indexed) </td></tr>
     <tr><td class="paramname">n</td><td>Number of bits to flip </td></tr>
   </table>
@@ -268,17 +268,17 @@ Macros</h2></td></tr>
 
 </div>
 </div>
-<a id="a6449d27a13901752547a9f0ec60317f5"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a6449d27a13901752547a9f0ec60317f5">&#9670;&nbsp;</a></span>BIT_READ</h2>
+<a id="afdbc889f27b8d4d0bcbcfe0c72d0df99"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afdbc889f27b8d4d0bcbcfe0c72d0df99">&#9670;&nbsp;</a></span>BIT_READ_1</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">#define BIT_READ</td>
+          <td class="memname">#define BIT_READ_1</td>
           <td>(</td>
           <td class="paramtype">&#160;</td>
-          <td class="paramname">value, </td>
+          <td class="paramname">var, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -289,15 +289,15 @@ Macros</h2></td></tr>
         <tr>
           <td></td>
           <td>)</td>
-          <td></td><td>&#160;&#160;&#160;((value &gt;&gt; pos) &amp; 0x01)</td>
+          <td></td><td>&#160;&#160;&#160;((var &gt;&gt; pos) &amp; 0x01)</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p>Read a BIT value from the variable at a given position. </p>
+<p>Read a BIT var from the variable at a given position. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">value</td><td>The input variable to read from </td></tr>
+    <tr><td class="paramname">var</td><td>The input variable to read from </td></tr>
     <tr><td class="paramname">pos</td><td>The position of the bit to read (0 indexed) </td></tr>
   </table>
   </dd>
@@ -306,8 +306,8 @@ Macros</h2></td></tr>
 
 </div>
 </div>
-<a id="a49854f34543c6aabf9b71517308ce194"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a49854f34543c6aabf9b71517308ce194">&#9670;&nbsp;</a></span>BIT_READ_N</h2>
+<a id="ad22981e28d383a782cb8bd9e85dac4fd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad22981e28d383a782cb8bd9e85dac4fd">&#9670;&nbsp;</a></span>BIT_READ_N</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -316,7 +316,7 @@ Macros</h2></td></tr>
           <td class="memname">#define BIT_READ_N</td>
           <td>(</td>
           <td class="paramtype">&#160;</td>
-          <td class="paramname">value, </td>
+          <td class="paramname">var, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -333,15 +333,15 @@ Macros</h2></td></tr>
         <tr>
           <td></td>
           <td>)</td>
-          <td></td><td>&#160;&#160;&#160;((value &gt;&gt; start_pos) &amp; <a class="el" href="bit_8h.html#a3c12c6d36ad0aa481a3436923d21f4f8">BIT_MASK</a>(n))</td>
+          <td></td><td>&#160;&#160;&#160;((var &gt;&gt; start_pos) &amp; <a class="el" href="bit_8h.html#a3c12c6d36ad0aa481a3436923d21f4f8">BIT_MASK</a>(n))</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p>Read N BIT values from the variable starting from a given position. </p>
+<p>Read N BIT vars from the variable starting from a given position. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">value</td><td>The input variable to read from </td></tr>
+    <tr><td class="paramname">var</td><td>The input variable to read from </td></tr>
     <tr><td class="paramname">start_pos</td><td>The starting position of the bit to read (0 indexed) </td></tr>
     <tr><td class="paramname">n</td><td>Number of bits to read </td></tr>
   </table>
@@ -351,17 +351,17 @@ Macros</h2></td></tr>
 
 </div>
 </div>
-<a id="a7b5507c765b63d36f04f262106c97872"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a7b5507c765b63d36f04f262106c97872">&#9670;&nbsp;</a></span>BIT_RESET</h2>
+<a id="aab2862e7851295eb7a04ce3754b5320d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aab2862e7851295eb7a04ce3754b5320d">&#9670;&nbsp;</a></span>BIT_RESET_1</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">#define BIT_RESET</td>
+          <td class="memname">#define BIT_RESET_1</td>
           <td>(</td>
           <td class="paramtype">&#160;</td>
-          <td class="paramname">value, </td>
+          <td class="paramname">var, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -372,7 +372,7 @@ Macros</h2></td></tr>
         <tr>
           <td></td>
           <td>)</td>
-          <td></td><td>&#160;&#160;&#160;(value &amp; ~(1 &lt;&lt; pos))</td>
+          <td></td><td>&#160;&#160;&#160;(var &amp; ~(1 &lt;&lt; pos))</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -380,7 +380,7 @@ Macros</h2></td></tr>
 <p>Clear a BIT from the variable at a given position. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">value</td><td>This output variable that is modified </td></tr>
+    <tr><td class="paramname">var</td><td>This output variable that is modified </td></tr>
     <tr><td class="paramname">pos</td><td>The BIT position to clear data (0 indexed) </td></tr>
   </table>
   </dd>
@@ -389,8 +389,8 @@ Macros</h2></td></tr>
 
 </div>
 </div>
-<a id="a916fcef68710e4ffc501703e3f262bcc"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a916fcef68710e4ffc501703e3f262bcc">&#9670;&nbsp;</a></span>BIT_RESET_N</h2>
+<a id="a8177577e16e522ce813cc289a973aea2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8177577e16e522ce813cc289a973aea2">&#9670;&nbsp;</a></span>BIT_RESET_N</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -399,7 +399,7 @@ Macros</h2></td></tr>
           <td class="memname">#define BIT_RESET_N</td>
           <td>(</td>
           <td class="paramtype">&#160;</td>
-          <td class="paramname">value, </td>
+          <td class="paramname">var, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -416,7 +416,7 @@ Macros</h2></td></tr>
         <tr>
           <td></td>
           <td>)</td>
-          <td></td><td>&#160;&#160;&#160;(value &amp; ~(<a class="el" href="bit_8h.html#a3c12c6d36ad0aa481a3436923d21f4f8">BIT_MASK</a>(n) &lt;&lt; start_pos))</td>
+          <td></td><td>&#160;&#160;&#160;(var &amp; ~(<a class="el" href="bit_8h.html#a3c12c6d36ad0aa481a3436923d21f4f8">BIT_MASK</a>(n) &lt;&lt; start_pos))</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -424,7 +424,7 @@ Macros</h2></td></tr>
 <p>Clear N BITS on the variable starting from a given position. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">value</td><td>The output variable that is modified </td></tr>
+    <tr><td class="paramname">var</td><td>The output variable that is modified </td></tr>
     <tr><td class="paramname">start_pos</td><td>The starting position of the bit (0 indexed) </td></tr>
     <tr><td class="paramname">n</td><td>The number of bits used </td></tr>
   </table>
@@ -434,17 +434,17 @@ Macros</h2></td></tr>
 
 </div>
 </div>
-<a id="aa4118521cb27055d7b32c169539b3003"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa4118521cb27055d7b32c169539b3003">&#9670;&nbsp;</a></span>BIT_SET</h2>
+<a id="a1bba3d65b97e468e3fa42fc9b160b9f6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1bba3d65b97e468e3fa42fc9b160b9f6">&#9670;&nbsp;</a></span>BIT_SET_1</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">#define BIT_SET</td>
+          <td class="memname">#define BIT_SET_1</td>
           <td>(</td>
           <td class="paramtype">&#160;</td>
-          <td class="paramname">value, </td>
+          <td class="paramname">var, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -455,7 +455,7 @@ Macros</h2></td></tr>
         <tr>
           <td></td>
           <td>)</td>
-          <td></td><td>&#160;&#160;&#160;(value | (1 &lt;&lt; pos))</td>
+          <td></td><td>&#160;&#160;&#160;(var | (1 &lt;&lt; pos))</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -463,7 +463,7 @@ Macros</h2></td></tr>
 <p>Set a BIT on the variable at a given position. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">value</td><td>The output variable that is modified </td></tr>
+    <tr><td class="paramname">var</td><td>The output variable that is modified </td></tr>
     <tr><td class="paramname">pos</td><td>The BIT position to set data (0 indexed) </td></tr>
   </table>
   </dd>
@@ -472,8 +472,8 @@ Macros</h2></td></tr>
 
 </div>
 </div>
-<a id="a57fb93c797c6f17edd47b511323f32cf"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a57fb93c797c6f17edd47b511323f32cf">&#9670;&nbsp;</a></span>BIT_SET_N</h2>
+<a id="ad2120a8967e969d05e4e3be573eb4910"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad2120a8967e969d05e4e3be573eb4910">&#9670;&nbsp;</a></span>BIT_SET_N</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -482,7 +482,7 @@ Macros</h2></td></tr>
           <td class="memname">#define BIT_SET_N</td>
           <td>(</td>
           <td class="paramtype">&#160;</td>
-          <td class="paramname">value, </td>
+          <td class="paramname">var, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -499,7 +499,7 @@ Macros</h2></td></tr>
         <tr>
           <td></td>
           <td>)</td>
-          <td></td><td>&#160;&#160;&#160;(value | (<a class="el" href="bit_8h.html#a3c12c6d36ad0aa481a3436923d21f4f8">BIT_MASK</a>(n) &lt;&lt; start_pos))</td>
+          <td></td><td>&#160;&#160;&#160;(var | (<a class="el" href="bit_8h.html#a3c12c6d36ad0aa481a3436923d21f4f8">BIT_MASK</a>(n) &lt;&lt; start_pos))</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -507,7 +507,7 @@ Macros</h2></td></tr>
 <p>Set N BITS on the variable starting from a given position. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">value</td><td>The output variable that is modified </td></tr>
+    <tr><td class="paramname">var</td><td>The output variable that is modified </td></tr>
     <tr><td class="paramname">start_pos</td><td>The starting position of the bit (0 indexed) </td></tr>
     <tr><td class="paramname">n</td><td>The number of bits used </td></tr>
   </table>

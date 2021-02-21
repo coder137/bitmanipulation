@@ -7,8 +7,8 @@ void tearDown() {}
 
 void test_bit_read(void) {
   uint32_t value = 0b0100;
-  TEST_ASSERT_EQUAL_UINT8(BIT_READ(value, 0), 0);
-  TEST_ASSERT_EQUAL_UINT8(BIT_READ(value, 2), 1);
+  TEST_ASSERT_EQUAL_UINT8(BIT_READ_1(value, 0), 0);
+  TEST_ASSERT_EQUAL_UINT8(BIT_READ_1(value, 2), 1);
 }
 
 void test_bit_read_n_single(void) {

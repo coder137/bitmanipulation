@@ -11,15 +11,15 @@ void test_bit_reset(void) {
   uint32_t value = 0;
 
   // Check manually
-  value = BIT_RESET(reset, 0);
+  value = BIT_RESET_1(reset, 0);
   TEST_ASSERT_EQUAL_UINT32(value, 0xFFFFFFFE);
 
-  value = BIT_RESET(reset, 3);
+  value = BIT_RESET_1(reset, 3);
   TEST_ASSERT_EQUAL_UINT32(value, 0xFFFFFFF7);
 
   // Check automated
   for (int i = 0; i < 32; i++) {
-    value = BIT_RESET(reset, i);
+    value = BIT_RESET_1(reset, i);
     TEST_ASSERT_EQUAL_UINT32(value, ~(1 << i));
   }
 }
