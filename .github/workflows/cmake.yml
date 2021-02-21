@@ -21,7 +21,7 @@ jobs:
 
     - name: System Packages
       run: |
-        sudo apt install ninja-build
+        sudo apt-get install ninja-build
 
     - name: System Information
       run: |
@@ -33,7 +33,6 @@ jobs:
       working-directory: ${{github.workspace}}/C
       run: |
         cmake -B build -G Ninja -DCMAKE_BUILD_TYPE=$BUILD_TYPE
-        ls
 
     - name: Build
       working-directory: ${{github.workspace}}/C
