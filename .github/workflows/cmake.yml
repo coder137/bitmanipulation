@@ -17,6 +17,11 @@ jobs:
     steps:
     - uses: actions/checkout@v2
 
+    - name: System Packages
+      run: |
+        sudo apt install ninja-build
+        sudo apt-get install ninja-build
+
     - name: System Information
       run: |
         cmake --version
