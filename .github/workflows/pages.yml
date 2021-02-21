@@ -1,0 +1,52 @@
+name: github pages
+
+on:
+  push:
+    branches:
+      - master # Set a branch name to trigger deployment
+
+env:
+  # Customize the CMake build type here (Release, Debug, RelWithDebInfo, etc.)
+  BUILD_TYPE: Release
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          submodules: true
+
+      - name: Setup
+        run: |
+          sudo apt-get install ninja-build gcovr doxygen
+
+      - name: Configure CMake
+        shell: bash
+        working-directory: ${{github.workspace}}/C
+        run: |
+          cmake -B build -G Ninja -DCMAKE_BUILD_TYPE=$BUILD_TYPE
+
+      - name: Build
+        working-directory: ${{github.workspace}}/C
+        shell: bash
+        run: cmake --build build --config $BUILD_TYPE
+
+      - name: Code Coverage
+        working-directory: ${{github.workspace}}/C
+        shell: bash
+        run: |
+          cmake --build build --target coverage
+
+      - name: Doxygen
+        working-directory: ${{github.workspace}}
+        shell: bash
+        run: |
+          doxygen
+          cp -r C/build/coverage/ docs/html/c_coverage
+
+      - name: Deploy
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./docs
