@@ -1,36 +1,25 @@
-name: CMake
+name: github pages
 
-on: [push]
+on:
+  push:
+    branches:
+      - master # Set a branch name to trigger deployment
 
 env:
   # Customize the CMake build type here (Release, Debug, RelWithDebInfo, etc.)
   BUILD_TYPE: Release
 
 jobs:
-  build:
-    # The CMake configure and build commands are platform agnostic and should work equally
-    # well on Windows or Mac.  You can convert this to a matrix build if you need
-    # cross-platform coverage.
-    # See: https://docs.github.com/en/free-pro-team@latest/actions/learn-github-actions/managing-complex-workflows#using-a-build-matrix
+  deploy:
     runs-on: ubuntu-latest
-
     steps:
       - uses: actions/checkout@v2
         with:
           submodules: true
 
-      - name: System Packages
+      - name: Setup
         run: |
           sudo apt-get install ninja-build gcovr doxygen
-
-      - name: System Information
-        run: |
-          cmake --version
-          ninja --version
-          gcovr --version
-          doxygen --version
-          python3 --version
-          pip3 --version
 
       - name: Configure CMake
         shell: bash
@@ -43,27 +32,20 @@ jobs:
         shell: bash
         run: cmake --build build --config $BUILD_TYPE
 
-      - name: Test
-        working-directory: ${{github.workspace}}/C/build
-        shell: bash
-        run: |
-          ctest -C $BUILD_TYPE --output-on-failure
-
-      # NOTE, Testing
       - name: Code Coverage
         working-directory: ${{github.workspace}}/C
         shell: bash
         run: |
           cmake --build build --target coverage
 
-      # NOTE, Testing
       - name: Doxygen
         working-directory: ${{github.workspace}}
         shell: bash
         run: |
           doxygen
           cp -r C/build/coverage/ docs/html/c_coverage
-          echo **********
-          ls -la docs/html/
-          echo **********
-          ls -la docs/html/c_coverage
+      # - name: Deploy
+      #   uses: peaceiris/actions-gh-pages@v3
+      #   with:
+      #     github_token: ${{ secrets.GITHUB_TOKEN }}
+      #     publish_dir: ./docs
