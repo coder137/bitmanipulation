@@ -7,17 +7,44 @@
   <LI><OBJECT type="text/sitemap"><param name="Local" value="bit_8h.html"><param name="Name" value="bit.h"></OBJECT>
   <UL>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="bit_8h.html#aa615562132cb65b7acbec2c7b2dc3b1d"><param name="Name" value="BIT_FLIP_1"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="bit_8h.html#ae3a6e1820e87595977b27c534995f215"><param name="Name" value="BIT_FLIP_N"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="bit_8h.html#a3c12c6d36ad0aa481a3436923d21f4f8"><param name="Name" value="BIT_MASK"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="bit_8h.html#a1d49978a2c60e8a4934cf1ffd7de10e2"><param name="Name" value="BIT_MASK64"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="bit_8h.html#a7d0460bbe1041be6fdf22fd2f9e85f46"><param name="Name" value="BIT_MASK_HELPER"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="bit_8h.html#afdbc889f27b8d4d0bcbcfe0c72d0df99"><param name="Name" value="BIT_READ_1"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="bit_8h.html#ad22981e28d383a782cb8bd9e85dac4fd"><param name="Name" value="BIT_READ_N"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="bit_8h.html#aab2862e7851295eb7a04ce3754b5320d"><param name="Name" value="BIT_RESET_1"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="bit_8h.html#a8177577e16e522ce813cc289a973aea2"><param name="Name" value="BIT_RESET_N"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="bit_8h.html#a1bba3d65b97e468e3fa42fc9b160b9f6"><param name="Name" value="BIT_SET_1"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="bit_8h.html#ad2120a8967e969d05e4e3be573eb4910"><param name="Name" value="BIT_SET_N"></OBJECT>
   </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="bit_8h.html"><param name="Name" value="bit.h"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="bit_8h.html#ae3a6e1820e87595977b27c534995f215"><param name="Name" value="BIT_FLIP_N"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="bit_8h.html"><param name="Name" value="bit.h"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="bit_8h.html#a3c12c6d36ad0aa481a3436923d21f4f8"><param name="Name" value="BIT_MASK"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="bit_8h.html"><param name="Name" value="bit.h"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="bit_8h.html#a1d49978a2c60e8a4934cf1ffd7de10e2"><param name="Name" value="BIT_MASK64"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="bit_8h.html"><param name="Name" value="bit.h"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="bit_8h.html#a7d0460bbe1041be6fdf22fd2f9e85f46"><param name="Name" value="BIT_MASK_HELPER"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="bit_8h.html"><param name="Name" value="bit.h"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="bit_8h.html#afdbc889f27b8d4d0bcbcfe0c72d0df99"><param name="Name" value="BIT_READ_1"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="bit_8h.html"><param name="Name" value="bit.h"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="bit_8h.html#ad22981e28d383a782cb8bd9e85dac4fd"><param name="Name" value="BIT_READ_N"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="bit_8h.html"><param name="Name" value="bit.h"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="bit_8h.html#aab2862e7851295eb7a04ce3754b5320d"><param name="Name" value="BIT_RESET_1"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="bit_8h.html"><param name="Name" value="bit.h"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="bit_8h.html#a8177577e16e522ce813cc289a973aea2"><param name="Name" value="BIT_RESET_N"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="bit_8h.html"><param name="Name" value="bit.h"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="bit_8h.html#a1bba3d65b97e468e3fa42fc9b160b9f6"><param name="Name" value="BIT_SET_1"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="bit_8h.html#ad2120a8967e969d05e4e3be573eb4910"><param name="Name" value="bit.h"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="bit_8h.html#aa615562132cb65b7acbec2c7b2dc3b1d"><param name="Name" value="BIT_FLIP_1"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="bit_8h.html#ae3a6e1820e87595977b27c534995f215"><param name="Name" value="BIT_FLIP_N"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="bit_8h.html#a1d49978a2c60e8a4934cf1ffd7de10e2"><param name="Name" value="BIT_MASK64"></OBJECT>
