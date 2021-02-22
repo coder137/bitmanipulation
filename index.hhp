@@ -13,9 +13,20 @@ main="Bit Manipulation","index.hhc","index.hhk","index.html","index.html",,,,,0x
 
 [FILES]
 bit_8h_source.html
+bit__flip_8h_source.html
+bit__mask_8h_source.html
+bit__read_8h_source.html
+bit__reset_8h_source.html
+bit__set_8h_source.html
 bit_8h.html
+bit__flip_8h.html
+bit__mask_8h.html
+bit__read_8h.html
+bit__reset_8h.html
+bit__set_8h.html
 _r_e_a_d_m_e_8md.html
 dir_af99bb3c152a306abd27951285ad1127.html
+dir_7de30d8d6441eca96418c0d836f3a440.html
 index.html
 files.html
 globals.html
