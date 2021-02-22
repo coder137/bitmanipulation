@@ -7,7 +7,10 @@ include(CTest)
 enable_testing()
 
 add_library(bit INTERFACE)
-target_include_directories(bit INTERFACE .)
+target_include_directories(bit INTERFACE 
+    .
+    include
+)
 
 # TESTS
 set(WARNINGS_AS_ERRORS -Wall -Werror)
