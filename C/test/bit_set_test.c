@@ -12,11 +12,12 @@ static void tester_bit_set_n(uint8_t start_pos, uint8_t n, uint32_t actual) {
   TEST_ASSERT_EQUAL_UINT32(value, actual);
 }
 
-void tester_bit_set_inplace_n(uint8_t start_pos, uint8_t n, uint32_t actual) {
-  uint32_t value = 0;
-  BIT_SET_INPLACE_N(value, start_pos, n);
-  TEST_ASSERT_EQUAL_UINT32(value, actual);
-}
+// static void tester_bit_set_inplace_n(uint8_t start_pos, uint8_t n, uint32_t
+// actual) {
+//   uint32_t value = 0;
+//   BIT_SET_INPLACE_N(value, start_pos, n);
+//   TEST_ASSERT_EQUAL_UINT32(value, actual);
+// }
 
 void setUp() {}
 void tearDown() {}
