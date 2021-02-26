@@ -21,13 +21,14 @@ jobs:
 
       - name: System Packages
         run: |
-          sudo apt-get install ninja-build gcovr doxygen
+          sudo apt-get install ninja-build gcovr doxygen lcov
 
       - name: System Information
         run: |
           cmake --version
           ninja --version
           gcovr --version
+          lcov --version
           doxygen --version
           python3 --version
           pip3 --version
@@ -48,6 +49,15 @@ jobs:
         shell: bash
         run: |
           ctest -C $BUILD_TYPE --output-on-failure
+
+      - name: CodeCov
+        working-directory: ${{github.workspace}}/C
+        shell: bash
+        run: |
+          lcov --capture --directory . --output-file coverage.info
+          lcov --remove coverage.info '/usr/*' --output-file coverage.info # filter system-files
+          lcov --list coverage.info # debug info
+          bash <(curl -s https://codecov.io/bash) -f coverage.info || echo "Codecov did not collect coverage reports"
 
       # NOTE, Testing
       - name: Code Coverage
