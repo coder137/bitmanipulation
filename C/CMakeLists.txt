@@ -44,9 +44,9 @@ add_bitmanipulation_test(bit_flip_test test/bit_flip_test.c)
 
 # COVERAGE target
 add_custom_target(coverage
-    COMMAND ninja all
-    COMMAND ninja test
-    COMMAND gcovr -r ../ --html --html-details -o coverage/coverage.html
-    BYPRODUCTS coverage/coverage.html
+    COMMAND cmake --build ${CMAKE_BINARY_DIR}
+    COMMAND cmake --build ${CMAKE_BINARY_DIR} --target test
+    COMMAND gcovr -r ${CMAKE_CURRENT_SOURCE_DIR} --html --html-details -o ${CMAKE_BINARY_DIR}/coverage/coverage.html
+    BYPRODUCTS {CMAKE_BINARY_DIR}/coverage/coverage.html
     VERBATIM USES_TERMINAL
 )

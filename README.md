@@ -7,7 +7,8 @@
 
 # Bit Manipulation
 
-[![Build Status](https://travis-ci.org/coder137/bitmanipulation.svg?branch=master)](https://travis-ci.org/coder137/bitmanipulation)
+![Github Action](https://github.com/coder137/bitmanipulation/actions/workflows/cmake.yml/badge.svg)
+[![codecov](https://codecov.io/gh/coder137/bitmanipulation/branch/master/graph/badge.svg?token=7727GKHSL7)](https://codecov.io/gh/coder137/bitmanipulation)
 
 C and C++ Library for bit manipulation
 
